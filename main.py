@@ -15,7 +15,7 @@ cursor.execute('''
         ''')
 connection.commit()
 
-Log_pattern = r"(\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}) - IP: ([\d\.]+) - (.*)"
+log_pattern = r"(\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}) - IP: ([\d\.]+) - (.*)"
 with open("server_logs.txt", "r") as file:
     for line in file:
         match = re.search(Log_pattern, line)
